@@ -1,8 +1,10 @@
 import Vue from "vue";
-import helloWorld from "./helloWorld";
+import appGroups from "./appGroups";
+import core from "./core";
 
 const components = {
-    ...helloWorld
+    ...appGroups,
+    ...core
 }
 
 Object.keys(components).forEach(component => {
