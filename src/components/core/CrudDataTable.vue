@@ -12,12 +12,6 @@
         <v-toolbar
             flat
         >
-<!--          <v-toolbar-title>My CRUD</v-toolbar-title>-->
-<!--          <v-divider-->
-<!--              class="mx-4"-->
-<!--              inset-->
-<!--              vertical-->
-<!--          ></v-divider>-->
           <v-spacer></v-spacer>
           <v-dialog
               v-model="dialog"
@@ -39,41 +33,7 @@
                 <span class="text-h5">{{ formTitle }}</span>
               </v-card-title>
               <v-card-text>
-<!--                <slot v-bind:selectedItem="selectedItem"></slot>-->
-                <v-container>
-                  <v-row>
-                    <v-col
-                        cols="12"
-                        sm="6"
-                        md="4"
-                    >
-                      <v-text-field
-                          v-model="selectedItem.name"
-                          label="Group Name"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col
-                        cols="12"
-                        sm="6"
-                        md="4"
-                    >
-                      <v-text-field
-                          v-model="selectedItem.description"
-                          label="Description"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col
-                        cols="12"
-                        sm="6"
-                        md="4"
-                    >
-                      <v-checkbox
-                          v-model="selectedItem.is_active"
-                          label="Active"
-                      ></v-checkbox>
-                    </v-col>
-                  </v-row>
-                </v-container>
+                <slot v-bind:selectedItem="selectedItem"></slot>
               </v-card-text>
 
               <v-card-actions>
@@ -198,13 +158,11 @@ export default {
   methods: {
     fetchData(){
       this.loading=true;
-      debugger;
       this.getFetchItems()(this)
         .then(results => this.items = results?.data?.results)
         .finally(() => this.loading=false);
     },
     editItem (item) {
-      debugger;
       this.selectedIndex = this.items.indexOf(item)
       this.selectedItem = Object.assign({}, item)
       this.dialog = true

@@ -7,10 +7,9 @@
         :getDeleteItem="deleteItem"
         :getEditItem="editItem"
     >
-<!--      <template v-slot:default="slotProps" >-->
-<!--        <h1>Hello</h1>-->
-<!--        <app-groups-edit-model :v-model="slotProps"/>-->
-<!--      </template>-->
+      <template v-slot:default="slotProps" >
+        <app-groups-edit-model v-model="slotProps.selectedItem"/>
+      </template>
     </CoreCrudDataTable>
   </v-container>
 </template>
@@ -36,9 +35,6 @@ export default {
     deleteItem() {
       return this.api.appGroup.delete;
     }
-  },
-  mounted(){
-    // this.testApi();
   }
 }
 </script>

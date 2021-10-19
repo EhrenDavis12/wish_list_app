@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    <h1>Im here</h1>
     <v-row>
       <v-col
           cols="12"
@@ -47,11 +46,9 @@ export default {
   },
   computed: {
     model: {
-      // getter
       get: function () {
         return this.value;
       },
-      // setter
       set: function (newValue) {
         this.$emit("input", newValue)
       }
