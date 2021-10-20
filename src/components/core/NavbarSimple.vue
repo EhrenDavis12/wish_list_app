@@ -2,6 +2,7 @@
   <div>
     <div id="nav">
         <router-link to="/">App Groups</router-link>
+        <router-link to="/wish_lists"> | Wish Lists</router-link>
         <router-link to="/logout"> | Logout</router-link>
     </div>
   </div>

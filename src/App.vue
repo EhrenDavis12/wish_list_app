@@ -1,11 +1,11 @@
 <template>
-  <div id="app" data-app>
+  <v-app id="app" data-app>
     <h1>Welcome To the Wish List App</h1>
     <div v-if="isLoggedIn">
       <core-navbar />
     </div>
     <router-view/>
-  </div>
+  </v-app>
 </template>
 
 <script>

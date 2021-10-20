@@ -6,7 +6,7 @@
         :items="items"
         item-key="name"
         class="elevation-1"
-        loading="loading"
+        :loading="loading"
     >
       <template v-slot:top>
         <v-toolbar
@@ -15,7 +15,7 @@
           <v-spacer></v-spacer>
           <v-dialog
               v-model="dialog"
-              max-width="500px"
+              max-width="700px"
           >
             <template v-slot:activator="{ on, attrs }">
               <v-btn
