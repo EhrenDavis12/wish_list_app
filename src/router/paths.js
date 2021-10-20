@@ -10,6 +10,14 @@ export default [
         }
     },
     {
+        path: '/wish_lists',
+        name: 'wish_lists',
+        view: 'WishLists',
+        meta: {
+            requiresLogin: true
+        }
+    },
+    {
         path: '/login',
         name: 'login',
         view: 'Login',
